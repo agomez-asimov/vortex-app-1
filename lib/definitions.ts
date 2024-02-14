@@ -35,15 +35,24 @@ export type Employee = {
   hireDate: string;
   address: Address;
   phone: string;
-  extension: string;
+  email: string;
   notes: string;
-  role: string;
-  comission?: number;
+  department: "hr" | "sales";
+  reportsTo: string;
+  commission?: number;
 };
 
 export type Order = {
+  id: number;
   date: Date;
   company: Company;
   ammount: number;
   status: "pending" | "paid";
+};
+
+export type RevenueEntry = {
+  year: number;
+  month: number;
+  total: number;
+  commission: number;
 };
